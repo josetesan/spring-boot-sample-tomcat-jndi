@@ -16,24 +16,22 @@
 
 package sample.tomcat.jndi;
 
-import javax.naming.NamingException;
-import javax.sql.DataSource;
-
 import org.apache.catalina.Context;
-import org.apache.catalina.deploy.ContextResource;
 import org.apache.catalina.startup.Tomcat;
+import org.apache.tomcat.util.descriptor.web.ContextResource;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jndi.JndiObjectFactoryBean;
 
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 @Configuration
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 public class SampleTomcatJndiApplication {
 
 	public static void main(String[] args) {
